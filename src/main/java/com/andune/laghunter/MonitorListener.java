@@ -115,10 +115,10 @@ public class MonitorListener implements Listener {
         timer.stopTimer(event);
     }
 
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void inventoryMoveItemEvent(InventoryMoveItemEvent event) {
-        timer.stopTimer(event);
-    }
+//    @EventHandler(priority = EventPriority.MONITOR)
+//    public void inventoryMoveItemEvent(InventoryMoveItemEvent event) {
+//        timer.stopTimer(event);
+//    }
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void inventoryClickEvent(InventoryClickEvent event) {

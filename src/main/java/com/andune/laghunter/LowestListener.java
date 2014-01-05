@@ -115,10 +115,10 @@ public class LowestListener implements Listener {
         timer.startTimer();
     }
 
-    @EventHandler(priority = EventPriority.LOWEST)
-    public void inventoryMoveItemEvent(InventoryMoveItemEvent event) {
-        timer.startTimer();
-    }
+//    @EventHandler(priority = EventPriority.LOWEST)
+//    public void inventoryMoveItemEvent(InventoryMoveItemEvent event) {
+//        timer.startTimer();
+//    }
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void inventoryClickEvent(InventoryClickEvent event) {
