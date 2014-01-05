@@ -15,8 +15,8 @@ public class Timer {
     private long timerStartNano;
 
     public Timer() {
-        // set sane 250ms default
-        nanoLimit = 250 * NANOS_IN_MILLIS;
+        // set sane 150ms default
+        nanoLimit = 150 * NANOS_IN_MILLIS;
     }
 
     public void startTimer() {
