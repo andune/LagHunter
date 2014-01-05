@@ -14,6 +14,7 @@ public class LagHunter extends JavaPlugin {
     private JarUtils jarUtils;
     private String buildNumber = "unknown";
     private Timer timer;
+    private TickMonitor tickMonitor;
 
     @Override
     public void onEnable() {
@@ -31,11 +32,15 @@ public class LagHunter extends JavaPlugin {
         // TEST ONLY
 //        getServer().getPluginManager().registerEvents(new TestListener(), this);
 
+        tickMonitor = new TickMonitor();
+        getServer().getScheduler().scheduleSyncRepeatingTask(this, tickMonitor, 0, 1);
+
         log.info("version " + getDescription().getVersion() + ", build " + buildNumber + " is enabled");
     }
 
     @Override
     public void onDisable() {
+        getServer().getScheduler().cancelTasks(this);
         log.info("version " + getDescription().getVersion() + ", build " + buildNumber + " is disabled");
     }
 }
