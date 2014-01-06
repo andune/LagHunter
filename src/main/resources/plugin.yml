@@ -1,0 +1,7 @@
+name: ${project.name}
+main:  ${groupId}.${project.name}
+url: ${project.url}
+version: ${project.version}
+author: andune
+loadbefore: [Vault, WorldEdit, bPermissions, PermissionsEx, TeleportSuite]
+load: STARTUP
